@@ -14,7 +14,7 @@ capabilities to provide smart suggestions, reminders, and categorization for you
 
 - **Intelligent Search** – Quickly find notes using AI-driven search.
 
-- **Minimalist UI** – A clean and user-friendly interface for smooth navigation.
+- **Minimalist UI** – A clean and user friendly interface for smooth navigation.
 
 ## Tech Stack
 
