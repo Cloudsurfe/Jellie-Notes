@@ -79,7 +79,7 @@ dependencies {
     implementation(libs.datastore.preferences)
 
     // Splash Screen
-    implementation("androidx.core:core-splashscreen:1.2.0-beta01")
+    implementation("androidx.core:core-splashscreen:1.2.0-beta02")
 
     // Performance & Baseline Profiles
     implementation(libs.androidx.profileinstaller)
