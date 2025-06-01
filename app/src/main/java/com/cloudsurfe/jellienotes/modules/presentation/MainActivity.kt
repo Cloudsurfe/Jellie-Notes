@@ -9,12 +9,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.cloudsurfe.jellienotes.core.SettingsConstants
 import com.cloudsurfe.jellienotes.data.setting.SettingsDataStore
+import com.cloudsurfe.jellienotes.modules.presentation.auth.ui.login
+import com.cloudsurfe.jellienotes.modules.presentation.auth.ui.register
 import com.cloudsurfe.jellienotes.modules.presentation.settings_screen.SettingsViewModel
 import com.cloudsurfe.jellienotes.ui.theme.JellyNotesTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.Serializable
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -41,9 +47,26 @@ class MainActivity : ComponentActivity() {
             JellyNotesTheme(
                 darkMode = settingState.value.darkMode,
             ) {
-
+                val navController = rememberNavController()
+                NavHost(
+                    navController = navController,
+                    startDestination = Login
+                ){
+                    composable<Login> {
+                        login(navController = navController)
+                    }
+                    composable<Register> {
+                        register(navController = navController)
+                    }
+                }
             }
         }
     }
 
 }
+
+@Serializable
+object Login
+
+@Serializable
+object Register

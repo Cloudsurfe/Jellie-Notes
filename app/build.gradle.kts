@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.hiltAndroid)
     alias(libs.plugins.ksp)
     alias(libs.plugins.baselineprofile)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -84,4 +85,8 @@ dependencies {
     // Performance & Baseline Profiles
     implementation(libs.androidx.profileinstaller)
     baselineProfile(project(":baselineprofile"))
+
+    //navigation
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 }
