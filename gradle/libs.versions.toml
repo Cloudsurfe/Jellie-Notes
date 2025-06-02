@@ -1,8 +1,8 @@
 [versions]
 agp = "8.10.1"
-kotlin = "2.1.20"
+kotlin = "2.1.21"
 ksp = "2.1.20-2.0.0"
-jetbrainsKotlinJvm = "2.1.20"
+jetbrainsKotlinJvm = "2.1.21"
 androidCoreKtx = "1.16.0"
 coreSplashscreen = "1.2.0-beta02"
 appcompat = "1.7.0"
