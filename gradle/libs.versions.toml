@@ -1,31 +1,46 @@
 [versions]
-agp = "8.10.0"
+agp = "8.10.1"
 kotlin = "2.1.20"
-coreKtx = "1.16.0"
+compileSdk = "36"
+minSdk = "30"
+targetSdk = "36"
+javaVersion = "17"
+ksp = "2.1.20-2.0.0"
+jetbrainsKotlinJvm = "2.1.20"
+androidCoreKtx = "1.16.0"
+coreSplashscreen = "1.2.0-beta02"
+appcompat = "1.7.0"
+material = "1.12.0"
+dataStore = "1.1.7"
+activityCompose = "1.10.1"
+composeBom = "2025.05.01"
+nav3Core = "1.0.0-alpha02"
+material3AdaptiveNav3 = "1.0.0-SNAPSHOT"
+lifecycleViewmodelNav3 = "1.0.0-alpha01"
+lifecycleRuntimeKtx = "2.9.0"
+daggerHilt = "2.56.2"
+daggerHiltCompiler = "2.56.1"
+hilt = "2.56.2"
+kotlinxSerializationCore = "1.8.1"
+kotlinxSerializationJson = "1.8.1"
+firebaseBom = "33.14.0"
+firebaseGoogleAuth = "21.3.0"
+gms = "4.4.2"
+onnxruntimeAndroid = "1.17.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.9.0"
-activityCompose = "1.10.1"
-composeBom = "2025.05.01"
-dagger-hilt = "2.56.2"
-dagger-hilt-compiler = "2.56.1"
-hilt = "2.56.2"
-ksp = "2.1.20-2.0.0"
-data-store = "1.1.7"
-jetbrainsKotlinJvm = "2.1.20"
 uiautomator = "2.3.0"
 benchmarkMacroJunit4 = "1.3.4"
 baselineprofile = "1.3.4"
 profileinstaller = "1.4.1"
 onnxruntime-android = "1.17.1"
-appcompat = "1.7.0"
-material = "1.12.0"
 composeNavigation = "2.8.0-alpha08"
 serialization = "1.6.3"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -50,8 +65,15 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
-
-[plugins]
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3Core" }
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3Core" }
+androidx-material3-adaptive-navigation3 = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "material3AdaptiveNav3" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodelNav3" }
+google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+google-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-google-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "firebaseGoogleAuth" }
+ugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
@@ -62,3 +84,4 @@ android-test = { id = "com.android.test", version.ref = "agp" }
 baselineprofile = { id = "androidx.baselineprofile", version.ref = "baselineprofile" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "gms"}

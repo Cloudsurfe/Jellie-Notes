@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.cloudsurfe.jellienotes.modules.presentation.Login
-import com.cloudsurfe.jellienotes.modules.presentation.Register
+import com.cloudsurfe.jellienotes.modules.Login
+import com.cloudsurfe.jellienotes.modules.Register
 import com.cloudsurfe.jellienotes.ui.theme.JellyNotesTheme
 
 @Composable

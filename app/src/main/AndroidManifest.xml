@@ -14,7 +14,7 @@
         android:theme="@style/Theme.JellyNotes"
         tools:targetApi="31">
         <activity
-            android:name=".modules.presentation.MainActivity"
+            android:name=".modules.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JellyNotes">

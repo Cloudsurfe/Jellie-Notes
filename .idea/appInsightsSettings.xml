@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.cloudsurfe.jellienotes" />
+                  <option name="mobileSdkAppId" value="1:331303210771:android:7a88b7da6757cce33994e6" />
+                  <option name="projectId" value="jellie-notes" />
+                  <option name="projectNumber" value="331303210771" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -1,4 +1,4 @@
-package com.cloudsurfe.jellienotes.modules.presentation
+package com.cloudsurfe.jellienotes.modules
 
 import android.graphics.Color
 import android.os.Bundle
@@ -16,7 +16,8 @@ import com.cloudsurfe.jellienotes.core.SettingsConstants
 import com.cloudsurfe.jellienotes.data.setting.SettingsDataStore
 import com.cloudsurfe.jellienotes.modules.presentation.auth.ui.login
 import com.cloudsurfe.jellienotes.modules.presentation.auth.ui.register
-import com.cloudsurfe.jellienotes.modules.presentation.settings_screen.SettingsViewModel
+import com.cloudsurfe.jellienotes.modules.presentation.JellieNotesApp
+import com.cloudsurfe.jellienotes.modules.presentation.setting_screen.SettingViewModel
 import com.cloudsurfe.jellienotes.ui.theme.JellyNotesTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
@@ -25,7 +26,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val settingsViewModel: SettingsViewModel by viewModels()
+    private val settingsViewModel: SettingViewModel by viewModels()
 
     @Inject
     lateinit var settingsDataStore: SettingsDataStore
@@ -59,6 +60,13 @@ class MainActivity : ComponentActivity() {
                         register(navController = navController)
                     }
                 }
+                JellieNotesApp(
+                    firstLaunch = firstLaunch,
+                    settingSViewModel = settingsViewModel,
+                    finishActivity = {
+                        finish()
+                    }
+                )
             }
         }
     }

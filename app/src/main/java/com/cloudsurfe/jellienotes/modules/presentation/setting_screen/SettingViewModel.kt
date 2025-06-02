@@ -1,4 +1,4 @@
-package com.cloudsurfe.jellienotes.modules.presentation.settings_screen
+package com.cloudsurfe.jellienotes.modules.presentation.setting_screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,15 +16,15 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class SettingsViewModel @Inject constructor(
+class SettingViewModel @Inject constructor(
     private val settingsDataStore: SettingsDataStore
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow(SettingsState())
+    private val _state = MutableStateFlow(SettingState())
     val state = _state.stateIn(
         viewModelScope,
         SharingStarted.WhileSubscribed(5000),
-        SettingsState()
+        SettingState()
     )
 
     var setKeepOnScreenCondition: Boolean = true
@@ -43,9 +43,9 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
-    fun onEvent(event: SettingsEvent) {
+    fun onEvent(event: SettingEvent) {
         when (event) {
-            SettingsEvent.SetFirstLaunch -> {
+            SettingEvent.SetFirstLaunch -> {
                 viewModelScope.launch(Dispatchers.IO){
                     settingsDataStore.putBoolean(SettingsConstants.FIRST_LAUNCH,false)
                     _state.update {
@@ -54,7 +54,7 @@ class SettingsViewModel @Inject constructor(
                 }
             }
 
-            is SettingsEvent.SetDarkMode -> {
+            is SettingEvent.SetDarkMode -> {
 
             }
 
