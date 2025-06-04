@@ -19,14 +19,13 @@ material3AdaptiveNav3 = "1.0.0-SNAPSHOT"
 lifecycleViewmodelNav3 = "1.0.0-alpha01"
 lifecycleRuntimeKtx = "2.9.0"
 daggerHilt = "2.56.2"
-daggerHiltCompiler = "2.56.1"
+daggerHiltCompiler = "2.56.2"
 hilt = "2.56.2"
 kotlinxSerializationCore = "1.8.1"
 kotlinxSerializationJson = "1.8.1"
 firebaseBom = "33.14.0"
 firebaseGoogleAuth = "21.3.0"
 gms = "4.4.2"
-onnxruntimeAndroid = "1.17.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -54,9 +53,9 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt" }
-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt-compiler" }
-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "data-store" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHiltCompiler" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "dataStore" }
 androidx-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
 androidx-benchmark-macro-junit4 = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "benchmarkMacroJunit4" }
 androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "profileinstaller" }
@@ -64,7 +63,8 @@ onnxruntime-android = {group = "com.microsoft.onnxruntime", name = "onnxruntime-
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson"}
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore"}
 androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3Core" }
 androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3Core" }
 androidx-material3-adaptive-navigation3 = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "material3AdaptiveNav3" }
@@ -73,7 +73,7 @@ google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref
 google-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 firebase-google-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "firebaseGoogleAuth" }
-ugins]
+[plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
