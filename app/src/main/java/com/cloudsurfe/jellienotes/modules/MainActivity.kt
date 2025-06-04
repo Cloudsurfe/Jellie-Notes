@@ -48,18 +48,6 @@ class MainActivity : ComponentActivity() {
             JellyNotesTheme(
                 darkMode = settingState.value.darkMode,
             ) {
-                val navController = rememberNavController()
-                NavHost(
-                    navController = navController,
-                    startDestination = Login
-                ){
-                    composable<Login> {
-                        login(navController = navController)
-                    }
-                    composable<Register> {
-                        register(navController = navController)
-                    }
-                }
                 JellieNotesApp(
                     firstLaunch = firstLaunch,
                     settingSViewModel = settingsViewModel,
