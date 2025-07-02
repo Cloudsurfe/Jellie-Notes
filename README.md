@@ -1,5 +1,6 @@
 # Jellie Notes
 © 2025 Cloudsurfe. All rights reserved.
+![Frame 7(2)](https://github.com/user-attachments/assets/713ecc23-6bb3-4b45-b1eb-649417270b49)
 
 
 ![Status](https://img.shields.io/badge/status-under_development-orange)
