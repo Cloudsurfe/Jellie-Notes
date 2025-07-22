@@ -13,7 +13,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselineprofile" />
             <option value="$PROJECT_DIR$/editor" />
-            <option value="$PROJECT_DIR$/llama" />
             <option value="$PROJECT_DIR$/plugins" />
             <option value="$PROJECT_DIR$/runtime" />
           </set>
