@@ -1,10 +1,7 @@
 package com.cloudsurfe.jellienotes.modules.presentation
 
-import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.NavKey
@@ -21,16 +18,13 @@ fun JellieNotesApp(
 
     val backstack = rememberNavBackStack(startDestination)
 
-    Scaffold(
+    MainNavigation(
         modifier = Modifier
-            .fillMaxSize(),
-    ) { paddingValues ->
-        MainNavigation(
-            modifier = Modifier
-                .consumeWindowInsets(paddingValues),
-            backstack = backstack,
-            settingViewModel = settingSViewModel,
-            finishActivity = finishActivity
-        )
-    }
+            .fillMaxSize()
+            .navigationBarsPadding(),
+        backstack = backstack,
+        settingViewModel = settingSViewModel,
+        finishActivity = finishActivity
+    )
+
 }
